@@ -6,13 +6,13 @@ var logger = require('morgan');
 const compression = require("compression");
 const helmet = require("helmet");
 
-app.use(compression()); // Compress all routes
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const catalogRouter = require("./routes/catalog");
 
 var app = express();
+app.use(compression()); // Compress all routes
 
 app.use(helmet());
 
